@@ -1,0 +1,100 @@
+,V
+>>>>>>> d1dcdac... config update,V
+=======,V
+echo 16384 > /sys/devices/system/node/node1/hugepages/hugepages-2048kB/nr_hugepages,V
+echo 16384 > /sys/devices/system/node/node0/hugepages/hugepages-2048kB/nr_hugepages,V
+echo "vm.nr_hugepages=32768" >> /etc/sysctl.d/hugepages.conf,V
+<<<<<<< HEAD,V
+    },V
+        },V
+            !isol_rxq_ring_sz 1048576,V
+            !isol_rx_cpu_ids  19,V
+            tx_queue_ids     3,V
+            rx_queue_ids     3,V
+        port    bond2 {,V
+        port    bond1 {,V
+        cpu_id  19,V
+        type    slave,V
+    <init> worker cpu19 {,V
+    <init> worker cpu12 {        type    slave        cpu_id  12        port    bond1 {            rx_queue_ids     3            tx_queue_ids     3            !isol_rx_cpu_ids  12            !isol_rxq_ring_sz 1048576        }        port    bond2 {            rx_queue_ids     3            tx_queue_ids     3            !isol_rx_cpu_ids  12            !isol_rxq_ring_sz 1048576        }    },V
+/,v
+t,v
+n,v
+e,v
+g,v
+a,v
+-,v
+s,v
+v,v
+p,v
+d,v
+b,v
+l,v
+x,v
+    sed -i "/Version:/c\Version: $version" dpvs-statistics/nlb-dpvs-statistics-agent/DEBIAN/control,V
+                                       vip, vni, uint32(float32(qos.ConnectionPerSecond) * 1.2)),V
+                                       vip, vni, qos.ConnectionPerSecond * 1200),V
+),v
+(,v
+I,v
+o,v
+.,v
+m,v
+c,v
+                                   common.InttoIp(vip), vni, uint32(float32(qos.ConnectionPerSecond) * 1.2)),V
+0,v
+2,v
+uint32(float32,v
+    MAX_PPS = 4000000 // 4G,V
+ ,v
+,,v
+var test,V
+",v
+H,v
+G,v
+!,v
+r,v
+R,v
+i,v
+u,v
+    fmt.Println(stringutil.Reverse("!oG ,olleH")),V
+	,v
+#,v
+>>>>>>> 76b64c1... 1.Don't allow del gloal addr pool  ifa address 2.Delete udp tunnel proc 3.slove bug for kni rule 4.inet_addr_ifa_get show use read lock,V
+                    cmd = "dpip vipqsch show vip %s -s" % vip,V
+                if self.lb_type == 'ilb':,V
+                if g_lb_type == 'ilb':,V
+        if self.lb_type == 'classic':,V
+line.split()[1].split(':')[0],v
+                    listener = line.split()[1] + ':' + line.split()[2],V
+                    vip_tmp = listener.split(':')[0] + ':' + listener.split(':')[2],V
++ ':' + line.split()[2],v
+                    vip = line.split()[1].split(':')[0],V
+                    listener = line.split()[1],V
+                    vip_tmp = listener.split(':')[0],V
+_,v
+            vip_tmp = ''            if g_lb_type == 'ilb':                listener = line.split()[1] + ':' + line.split()[2]                vip_tmp = listener.split(':')[0] + ':' + listener.split(':')[2]            else:                listener = line.split()[1]                vip_tmp = listener.split(':')[0],V
+                real_server = backend_info[1],V
+                real_server = ''                 if self.lb_type == 'ilb':                    real_server = backend_info[1] + ':' + backend_info[4]                else:                    real_server = backend_info[1],V
+                continue,V
+                    vip = vip_tmp,V
+                        listeners = dict(),V
+                        instances[vip] = copy.deepcopy(listeners),V
+                    if listeners:,V
+                if vip_tmp != vip:,V
+                    continue,V
+                    flag = False,V
+                if self._is_probe_ip(vip_tmp):,V
+                vip_tmp = line.split()[1].split(':')[0],V
+                listener = line.split()[1],V
+                vip_tmp = ''                 if self.lb_type == 'ilb':                    listener = line.split()[1] + ':' + line.split()[2]                    vip_tmp = listener.split(':')[0] + ':' + listener.split(':')[2]                else:                    listener = line.split()[1]                    vip_tmp = listener.split(':')[0]                if _is_probe_ip(listener.split(':')[0]):                    flag = False                if vip_tmp != vip:                    if listeners:                        instances[vip] = copy.deepcopy(listeners)                        listeners = dict()                    vip = vip_tmp                continue,V
+],v
+1,v
+[,v
+f,v
+k,v
+            if g_lb_type == 'ilb':                real_server = backend_info[1] + ':' + backend_info[4]            else:                real_server = backend_info[1],V
+            if self.lb_type == 'classic':,V
+            if _is_probe_ip(listener.split(':')[0]):,V
+            continue,V
+',v
